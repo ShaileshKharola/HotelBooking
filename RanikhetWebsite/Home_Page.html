@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Roboto:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        background-color: #000;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 4px;
+      }
+
+      .nav-links a {
+        min-width: 170px;
+        margin-right: 20px;
+        text-decoration: none;
+        color: black;
+        margin-top: 30px;
+        padding-top: 30px;
+      }
+
+      .hero {
+        background-image: url(/RanikhetWebsite/Backgrounds/ranikhetbackgound.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        padding-top: 60px;
+      }
+
+      .hero-content {
+        background: rgb(255, 255, 255);
+        padding: 25px;
+        border-radius: 10px;
+        padding-top: 15px;
+      }
+
+      .search-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+        justify-content: center;
+      }
+
+      .search-box input,
+      .search-box select,
+      .search-box button {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(163, 163, 163);
+      }
+
+      .search-box button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        background-color: #ff6d38;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        align-self: end;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .input-group label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .about {
+        background-image: url(/RanikhetWebsite/Backgrounds/bgforest.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        padding: 40px 20px;
+        background-color: #f5f5f5;
+        text-align: center;
+      }
+
+      .about h2 {
+        margin-bottom: 20px;
+        color: black;
+        font-family: Akaya Kanadaka;
+      }
+
+      .categories {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px 20px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        width: 200px;
+        text-align: center;
+      }
+
+      .card img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .card p {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      .Category-box {
+        background-color: white;
+        display: flex;
+        width: 900px;
+        padding-top: 20px;
+        padding-bottom: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 8px;
+      }
+
+      .Check-In {
+        vertical-align: top;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">RRH</div>
+        <div class="nav-links">
+          <a href="#">Login</a>
+          <a href="#">Register</a>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div class="hero-content">
+          <h2>Book Hotels and Homestays</h2>
+          <div class="search-box">
+            <div class="input-group">
+              <label for="location">Where To</label>
+              <input type="text" id="location" placeholder="Ranikhet" />
+            </div>
+
+            <div class="input-group">
+              <label for="checkin">Check In</label>
+              <input type="date" id="checkin" />
+            </div>
+
+            <div class="input-group">
+              <label for="checkout">Check Out</label>
+              <input type="date" id="checkout" />
+            </div>
+
+            <div class="input-group">
+              <label for="guests">Guests & Rooms</label>
+              <select id="guests">
+                <option>2 Adults | 1 Room</option>
+                <option>1 Adult | 1 Room</option>
+              </select>
+            </div>
+
+            <button>Search</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="about">
+        <h2>Discover the Charm of Ranikhet: A Glimpse into Its History</h2>
+        <p style="font-family: Akaya Kanadaka">
+          Nested in the Kumaon region of Uttarakhand, Ranikhet—meaning "Queen’s
+          Meadow"—is a picturesque hill station with a history as captivating as
+          its landscapes. Legend has it that Queen Padmini of the Kumaon region
+          was so enchanted by the natural beauty of this place that King
+          Sudhardev built a palace for her. Though no remnants of the palace
+          remain, the area came to be known as Ranikhet in her honor.
+          <br /><br />
+          Later, during the British era, Ranikhet became an important cantonment
+          town. The British were drawn to its cool climate and scenic
+          surroundings, establishing it as a summer retreat and military base.
+          Today, Ranikhet continues to serve as a cantonment town for the Indian
+          Army’s Kumaon Regiment.
+        </p>
+        <section class="categories">
+          <div class="Category-box">
+            <div class="card">
+              <img src="./Backgrounds/trail2.jpg" alt="Nature's Wonderland" />
+              <p>Nature's Wonderland</p>
+            </div>
+            <div class="card">
+              <img src="./Backgrounds/trial4.jpeg" alt="Beautiful Gardens" />
+              <p>Beautiful Gardens</p>
+            </div>
+            <div class="card">
+              <img src="./Backgrounds/trial5.jpg" alt="Temples & Culture" />
+              <p>Temples & Culture</p>
+            </div>
+            <div class="card">
+              <img
+                src="/RanikhetWebsite/Backgrounds/trial6.jpg"
+                alt="Hill-top Getaways"
+              />
+              <p>Hill-top Getaways</p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script>
+      const today = new Date();
+      const tomorrow = new Date();
+      tomorrow.setDate(today.getDate() + 1);
+
+      const formatDate = (date) => date.toISOString().split("T")[0];
+
+      document.getElementById("checkin").value = formatDate(today);
+      document.getElementById("checkout").value = formatDate(tomorrow);
+    </script>
+  </body>
+</html>
