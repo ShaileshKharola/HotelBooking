@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ranikhet Retreat Hotels</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Roboto:ital,wght@0,500;1,500&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      background-image: url(./Images/ranikhetbackgound.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: rgb(0, 0, 0);
+      padding-top: 60px;
+    }
+
+    .hero-content {
+      background: rgb(255, 255, 255);
+      padding: 25px;
+      border-radius: 10px;
+      padding-top: 15px;
+      max-width: 900px;
+      width: 90%;
+    }
+
+    .hero-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #0b2d5f;
+    }
+
+    .search-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    .search-box input,
+    .search-box select,
+    .search-box button {
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(163, 163, 163);
+    }
+
+    .search-box input:focus,
+    .search-box select:focus {
+      outline: 2px solid #3399ff;
+    }
+
+    .search-box button {
+      padding: 12px 30px;
+      font-size: 16px;
+      border: none;
+      background: linear-gradient(to right, #2e8dfd, #007bff);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .search-box button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .input-group label {
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 14px;
+      color: #0b2d5f;
+    }
+
+    .about {
+      background-image: url(./Images/bgforest.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding: 60px 20px;
+      background-color: #f5f5f5;
+      text-align: center;
+    }
+
+    .about h2 {
+      margin-bottom: 20px;
+      color: #fff;
+      font-family: 'Akaya Kanadaka', cursive;
+      font-size: 2.5rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto 30px;
+      color: #f0f4f8;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+      background-color: rgba(11, 45, 95, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-family: 'Akaya Kanadaka', cursive, sans-serif;
+      flex-wrap: wrap;
+    }
+
+    .Category-box {
+      background-color: rgba(255, 255, 255, 0.425);
+      display: flex;
+      width: 100%;
+      max-width: 1000px;
+      padding: 30px;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(204, 199, 199, 0.2);
+    }
+
+    .card {
+      width: 200px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 5px 15px rgba(216, 210, 210, 0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(174, 169, 169, 0.279);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .card p {
+      margin: 15px 0;
+      font-weight: bold;
+      color: #f4f5f6;
+      font-size: 1.1rem;
+    }
+    
+    @media (max-width: 900px) {
+      .Category-box {
+        flex-direction: column;
+        gap: 30px;
+      }
+      
+      .hero-content h2 {
+        font-size: 2rem;
+      }
+      
+      .search-box {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .input-group {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="white-header">
+      <div class="logo">RRH</div>
+      <div class="hlogo hover-back">
+          <img src="Images/Hotel.PNG" alt="Hotel">
+      </div>
+      <div class="user-account-section">
+          <div class="login-options">
+              <img src="Images/Login.PNG" alt="Login" class="login-icon">
+              <div class="login-text">
+                  <span class="login-line"><a href="#">Login</a> or</span>
+                  <span class="account-line"><a href="#">Create Account</a></span>
+              </div>
+          </div>
+          <div class="dropdown-section">
+              <div class="dropdown">
+                  <span class="dropdown-label">Language</span>
+                  <select class="dropdown-select">
+                      <option>English</option>
+                      <option>Hindi</option>
+                  </select>
+              </div>
+              <div class="dropdown">
+                  <span class="dropdown-label">Currency</span>
+                  <select class="dropdown-select">
+                      <option>INR</option>
+                  </select>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="hero-content">
+        <h2>Experience the Majesty of Ranikhet</h2>
+        <div class="search-box">
+          <div class="input-group">
+            <label for="location">Where To</label>
+            <input type="text" id="location" placeholder="Ranikhet" />
+          </div>
+
+          <div class="input-group">
+            <label for="checkin">Check In</label>
+            <input type="date" id="checkin" />
+          </div>
+
+          <div class="input-group">
+            <label for="checkout">Check Out</label>
+            <input type="date" id="checkout" />
+          </div>
+
+          <div class="input-group">
+            <label for="guests">Guests & Rooms</label>
+            <select id="guests">
+              <option>2 Adults | 1 Room</option>
+              <option>1 Adult | 1 Room</option>
+              <option>2 Adults | 2 Rooms</option>
+              <option>Family (4 Adults)</option>
+            </select>
+          </div>
+
+          <button>Find Hotels</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>Discover the Charm of Ranikhet: A Glimpse into Its History</h2>
+      <p>
+        Nestled in the Kumaon region of Uttarakhand, Ranikhet—meaning "Queen's
+        Meadow"—is a picturesque hill station with a history as captivating as
+        its landscapes. Legend has it that Queen Padmini of the Kumaon region
+        was so enchanted by the natural beauty of this place that King
+        Sudhardev built a palace for her. Though no remnants of the palace
+        remain, the area came to be known as Ranikhet in her honor.
+      </p>
+      <p>
+        Later, during the British era, Ranikhet became an important cantonment
+        town. The British were drawn to its cool climate and scenic
+        surroundings, establishing it as a summer retreat and military base.
+        Today, Ranikhet continues to serve as a cantonment town for the Indian
+        Army's Kumaon Regiment.
+      </p>
+      
+      <div class="categories">
+        <div class="Category-box">
+          <div class="card">
+            <img src="./Images/trail2.jpg" alt="Nature's Wonderland" />
+            <p>Nature's Wonderland</p>
+          </div>
+          <div class="card">
+            <img src="./Images/trial4.jpeg" alt="Beautiful Gardens" />
+            <p>Beautiful Gardens</p>
+          </div>
+          <div class="card">
+            <img src="./Images/trial5.jpg" alt="Temples & Culture" />
+            <p>Temples & Culture</p>
+          </div>
+          <div class="card">
+            <img
+              src="./Images/trial6.jpg"
+              alt="Hill-top Getaways"
+            />
+            <p>Hill-top Getaways</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer-container">
+    <div class="footer-grid">
+      <div>
+        <div class="footerlogo">RRH</div>
+        <p class="description">Your trusted hotel booking platform for the majestic Ranikhet region.</p>
+      </div>
+      <div>
+        <p class="footer-title">COMPANY</p>
+        <ul class="footer-links">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">DELIVERY</a></li>
+          <li><a href="#">PRIVACY POLICY</a></li>
+          <li><a href="#">TERMS OF SERVICE</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">GET IN TOUCH</p>
+        <ul class="footer-links">
+          <li>Email: Hunter@gmail.com</li>
+          <li>Phone: +91 97568 48533</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Hunter. All rights reserved.</p>
+      <p>Designed by Hunter</p>
+    </div>
+  </footer>
+
+  <script>
+    const today = new Date();
+    const tomorrow = new Date();
+    tomorrow.setDate(today.getDate() + 1);
+
+    const formatDate = (date) => date.toISOString().split("T")[0];
+
+    document.getElementById("checkin").value = formatDate(today);
+    document.getElementById("checkout").value = formatDate(tomorrow);
+    
+    // Set min date for checkin to today
+    const checkin = document.getElementById("checkin");
+    const checkout = document.getElementById("checkout");
+    
+    checkin.min = formatDate(today);
+    
+    // Update checkout min date when checkin changes
+    checkin.addEventListener('change', function() {
+      checkout.min = this.value;
+      if (new Date(checkout.value) < new Date(this.value)) {
+        checkout.value = formatDate(new Date(new Date(this.value).setDate(new Date(this.value).getDate() + 1)));
+      }
+    });
+  </script>
+</body>
+</html>
