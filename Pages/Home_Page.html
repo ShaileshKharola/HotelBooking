@@ -6,7 +6,7 @@
   <title>Ranikhet Retreat Hotels</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Roboto:ital,wght@0,500;1,500&display=swap"
     rel="stylesheet"
@@ -47,7 +47,7 @@
       color: #0b2d5f;
     }
 
-    .search-box {
+    .search-box { 
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
@@ -89,6 +89,7 @@
 
     .input-group {
       display: flex;
+      padding: 6px 15px;
       flex-direction: column;
       align-items: flex-start;
       flex: 1;
@@ -100,6 +101,16 @@
       font-weight: bold;
       font-size: 14px;
       color: #0b2d5f;
+    }
+
+    .search-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-button a {
+      text-decoration: none;
     }
 
     .about {
@@ -209,14 +220,16 @@
     <div class="white-header">
       <div class="logo">RRH</div>
       <div class="hlogo hover-back">
-          <img src="Images/Hotel.PNG" alt="Hotel">
+          <a href="/Pages/Home_Page.html">
+            <img src="Images/Hotel.PNG" alt="Hotel">
+          </a>
       </div>
       <div class="user-account-section">
           <div class="login-options">
               <img src="Images/Login.PNG" alt="Login" class="login-icon">
               <div class="login-text">
-                  <span class="login-line"><a href="#">Login</a> or</span>
-                  <span class="account-line"><a href="#">Create Account</a></span>
+                  <span class="login-line"><a href="/Pages/Sign_In_Page.html">Login</a> or</span>
+                  <span class="account-line"><a href="/Pages/Sign_Up_Page.html">Create Account</a></span>
               </div>
           </div>
           <div class="dropdown-section">
@@ -237,39 +250,47 @@
       </div>
     </div>
 
-    <div class="hero">
-      <div class="hero-content">
-        <h2>Experience the Majesty of Ranikhet</h2>
-        <div class="search-box">
-          <div class="input-group">
-            <label for="location">Where To</label>
-            <input type="text" id="location" placeholder="Ranikhet" />
-          </div>
+<div class="hero">
+  <div class="hero-content">
+    <h2>Experience the Majesty of Ranikhet</h2>
+    
+    <div class="search-box">
+      <div class="input-group">
+        <label for="location">Where To</label>
+        <input type="text" id="location" placeholder="Ranikhet" />
+      </div>
 
-          <div class="input-group">
-            <label for="checkin">Check In</label>
-            <input type="date" id="checkin" />
-          </div>
+      <div class="input-group"> 
+        <label for="checkin">Check In</label>
+        <input type="date" id="checkin" />
+      </div>
 
-          <div class="input-group">
-            <label for="checkout">Check Out</label>
-            <input type="date" id="checkout" />
-          </div>
+      <div class="input-group">
+        <label for="checkout">Check Out</label>
+        <input type="date" id="checkout" />
+      </div>
 
-          <div class="input-group">
-            <label for="guests">Guests & Rooms</label>
-            <select id="guests">
-              <option>2 Adults | 1 Room</option>
-              <option>1 Adult | 1 Room</option>
-              <option>2 Adults | 2 Rooms</option>
-              <option>Family (4 Adults)</option>
-            </select>
-          </div>
+      <div class="input-group">
+        <label for="guests">Guests & Rooms</label>
+        <select id="guests">
+          <option>2 Adults | 1 Room</option>
+          <option>1 Adult | 1 Room</option>
+          <option>2 Adults | 2 Rooms</option>
+          <option>Family (4 Adults)</option>
+        </select>
+      </div>
 
-          <button>Find Hotels</button>
-        </div>
+      <div class="search-button">
+        <a href="hotelListing.html">
+          <button type="button">Search</button>
+        </a>
       </div>
     </div>
+
+  </div>
+</div>
+
+  </div>
   </header>
 
   <main>
